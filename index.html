@@ -5,34 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataClean AI - Enhancing AI Performance Through Data Cleaning</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="styles.css" rel="stylesheet">
-    <style>
-        .hidden {
-            display: none;
-        }
-    </style>
 </head>
-<body class="bg-gray-100 font-sans">
-    <header class="bg-blue-600 text-white p-4">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-bold">DataClean AI</h1>
-            <p class="mt-2">Enhancing AI Performance Through Data Cleaning</p>
+<body class="font-sans">
+    <header class="bg-navy text-white p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-white text-4xl mr-3">
+                    <i class="fas fa-database"></i>
+                    <i class="fas fa-sparkles" style="position: relative; font-size: 0.5em; top: -0.5em; left: -0.5em;"></i>
+                </div>
+                <h1 class="text-3xl font-bold">DataClean AI</h1>
+            </div>
+            <nav>
+                <a href="#services" class="text-white hover:text-gray-300 ml-4">Services</a>
+                <a href="#how-it-works" class="text-white hover:text-gray-300 ml-4">How It Works</a>
+                <a href="#team" class="text-white hover:text-gray-300 ml-4">Our Team</a>
+                <a href="#faq" class="text-white hover:text-gray-300 ml-4">FAQ</a>
+            </nav>
         </div>
     </header>
 
     <main class="container mx-auto mt-8 p-4">
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4">Our Services</h2>
-            <p class="text-lg">We work with companies and AI agent providers to clean data sources, improving AI performance and output quality across various domains.</p>
+        <!-- Hero Section -->
+        <section class="text-center py-20 bg-light-gray rounded-lg mb-12">
+            <h2 class="text-4xl font-bold text-navy mb-4">Enhance Your AI Performance</h2>
+            <p class="text-xl mb-8">We clean your data, so your AI can perform at its best.</p>
+            <a href="#contact" onclick="showContactForm()" class="bg-navy hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-full text-lg">Get Started</a>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4">Use Cases</h2>
+        <section id="services" class="mb-16">
+            <h2 class="text-3xl font-semibold mb-6 text-navy">Our Services</h2>
+            <p class="text-lg mb-8">We work with companies and AI agent providers to clean data sources, improving AI performance and output quality across various domains.</p>
+            
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="flex border-b">
-                    <button class="flex-1 py-2 px-4 text-center font-semibold bg-blue-500 text-white" onclick="showUseCase('sales')">Sales Agent</button>
-                    <button class="flex-1 py-2 px-4 text-center font-semibold" onclick="showUseCase('support')">Customer Support</button>
-                    <button class="flex-1 py-2 px-4 text-center font-semibold" onclick="showUseCase('contract')">Contract Agent</button>
+                <div class="flex border-b border-navy">
+                    <button class="flex-1 py-2 px-4 text-center font-semibold bg-navy text-white" onclick="showUseCase('sales')">Sales Agent</button>
+                    <button class="flex-1 py-2 px-4 text-center font-semibold text-navy" onclick="showUseCase('support')">Customer Support</button>
+                    <button class="flex-1 py-2 px-4 text-center font-semibold text-navy" onclick="showUseCase('contract')">Contract Agent</button>
                 </div>
                 <div id="useCaseContent" class="p-6">
                     <!-- Content will be dynamically inserted here -->
@@ -40,46 +52,58 @@
             </div>
         </section>
 
-        <section>
-            <h2 class="text-2xl font-semibold mb-4">Why Choose Us?</h2>
-            <ul class="list-disc list-inside">
-                <li>Improved AI response accuracy</li>
-                <li>Enhanced customer satisfaction</li>
-                <li>Reduced need for human intervention</li>
-                <li>Customized data cleaning solutions</li>
-            </ul>
+        <section id="why-choose-us" class="mb-16">
+            <h2 class="text-3xl font-semibold mb-6 text-navy">Why Choose Us?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <i class="fas fa-chart-line text-4xl text-navy mb-4"></i>
+                    <p>Improved AI response accuracy</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-smile text-4xl text-navy mb-4"></i>
+                    <p>Enhanced customer satisfaction</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-robot text-4xl text-navy mb-4"></i>
+                    <p>Reduced need for human intervention</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-cogs text-4xl text-navy mb-4"></i>
+                    <p>Customized data cleaning solutions</p>
+                </div>
+            </div>
         </section>
 
-        <!-- New How It Works Section -->
-        <section class="mt-12">
-            <h2 class="text-2xl font-semibold mb-4">How It Works</h2>
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="mb-16">
+            <h2 class="text-3xl font-semibold mb-6 text-navy">How It Works</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="text-4xl mb-4">🕐</div>
+                    <i class="fas fa-file-upload text-4xl text-navy mb-4"></i>
                     <h3 class="font-semibold mb-2">Step 1</h3>
                     <p>You send us a sample of the problematic dataset</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="text-4xl mb-4">🕑</div>
+                    <i class="fas fa-search text-4xl text-navy mb-4"></i>
                     <h3 class="font-semibold mb-2">Step 2</h3>
                     <p>We make a diagnostic and give you an estimated time of arrival for the sample</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="text-4xl mb-4">🕒</div>
+                    <i class="fas fa-check-circle text-4xl text-navy mb-4"></i>
                     <h3 class="font-semibold mb-2">Step 3</h3>
-                    <p>Once cleaned, we send you back the sample free of charge</p>
+                    <p>Once cleaned, we send you back the sample free of charge. We can also help test the result of the agent before and after cleaning to demonstrate the improvement.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="text-4xl mb-4">🕓</div>
+                    <i class="fas fa-expand-alt text-4xl text-navy mb-4"></i>
                     <h3 class="font-semibold mb-2">Step 4</h3>
                     <p>You can then decide to extend the service to the full dataset and regular deliveries if relevant</p>
                 </div>
             </div>
         </section>
 
-        <!-- New Team Section -->
-        <section class="mt-12">
-            <h2 class="text-2xl font-semibold mb-4">Our Team</h2>
+        <!-- Our Team Section -->
+        <section id="team" class="mt-12">
+            <h2 class="text-3xl font-semibold mb-6 text-navy">Our Team</h2>
             <p class="mb-6">At DataClean AI, our team consists of industry veterans with extensive experience in data management and AI technologies. Our experts have worked with leading companies and organizations worldwide, bringing a wealth of knowledge to every project.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -101,72 +125,81 @@
             <p class="mt-6">Our team's diverse experience with companies like JP Morgan, the French government, WeWork, and many others ensures that we can handle data cleaning challenges across various industries and scales.</p>
         </section>
 
-        <!-- New FAQ Section -->
-        <section class="mt-12">
-            <h2 class="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
+        <!-- FAQ Section -->
+        <section id="faq" class="mt-12">
+            <h2 class="text-3xl font-semibold mb-6 text-navy">Frequently Asked Questions</h2>
             <div class="space-y-4">
-                <div class="bg-white rounded-lg shadow">
-                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
-                        <h3 class="font-semibold text-lg">What types of data can you clean?</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <button class="w-full text-left font-semibold text-navy hover:text-blue-800" onclick="toggleFAQ(this)">
+                        What types of data can you clean?
                     </button>
-                    <div class="p-4 border-t hidden">
-                        <p>We specialize in cleaning various types of data, including customer information, product details, transaction records, and more. Our solutions are adaptable to different industries and data formats.</p>
+                    <div class="hidden mt-2">
+                        <p>We can clean various types of data, including structured, unstructured, and semi-structured data. Our services are tailored to meet the specific needs of your AI agents.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow">
-                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
-                        <h3 class="font-semibold text-lg">How does your data cleaning process work?</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <button class="w-full text-left font-semibold text-navy hover:text-blue-800" onclick="toggleFAQ(this)">
+                        How does the data cleaning process work?
                     </button>
-                    <div class="p-4 border-t hidden">
-                        <p>Our process involves analyzing your data, identifying inconsistencies and errors, applying custom cleaning algorithms, and validating the results. We work closely with your team to ensure the cleaned data meets your specific needs.</p>
+                    <div class="hidden mt-2">
+                        <p>Our data cleaning process involves several stages, including data profiling, data validation, data normalization, and data enrichment. We use a combination of automated and manual techniques to ensure the highest quality results.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow">
-                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
-                        <h3 class="font-semibold text-lg">Is my data secure during the cleaning process?</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <button class="w-full text-left font-semibold text-navy hover:text-blue-800" onclick="toggleFAQ(this)">
+                        Is my data secure during the cleaning process?
                     </button>
-                    <div class="p-4 border-t hidden">
-                        <p>Absolutely. We prioritize data security and comply with industry standards for data protection. All data is encrypted during transfer and processing, and we can sign NDAs if required.</p>
+                    <div class="hidden mt-2">
+                        <p>Absolutely. We prioritize data security and privacy. All data is handled with the utmost care and confidentiality. We use secure protocols and encryption techniques to protect your data throughout the cleaning process.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow">
-                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
-                        <h3 class="font-semibold text-lg">How long does the data cleaning process take?</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <button class="w-full text-left font-semibold text-navy hover:text-blue-800" onclick="toggleFAQ(this)">
+                        How long does the data cleaning process take?
                     </button>
-                    <div class="p-4 border-t hidden">
-                        <p>The duration depends on the volume and complexity of your data. We provide estimated timelines after an initial assessment of your dataset. For ongoing services, we establish regular cleaning schedules to maintain data quality.</p>
+                    <div class="hidden mt-2">
+                        <p>The duration of the data cleaning process varies depending on the size and complexity of the dataset. We provide an estimated time of arrival for the sample, and the full cleaning process can be extended to the full dataset and regular deliveries if relevant.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow">
-                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
-                        <h3 class="font-semibold text-lg">Can you integrate with our existing systems?</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <button class="w-full text-left font-semibold text-navy hover:text-blue-800" onclick="toggleFAQ(this)">
+                        Can you integrate with our existing systems?
                     </button>
-                    <div class="p-4 border-t hidden">
-                        <p>Yes, we design our solutions to integrate seamlessly with various data management systems and AI platforms. We'll work with your IT team to ensure smooth integration and data flow.</p>
+                    <div class="hidden mt-2">
+                        <p>Yes, we can integrate with your existing systems. Our team of experts will work closely with you to understand your infrastructure and develop a custom integration solution that meets your specific needs.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow">
-                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
-                        <h3 class="font-semibold text-lg">Will my data be used to clean the data of my competitors?</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <button class="w-full text-left font-semibold text-navy hover:text-blue-800" onclick="toggleFAQ(this)">
+                        Will my data be used to clean the data of my competitors?
                     </button>
-                    <div class="p-4 border-t hidden">
-                        <p>Absolutely not. You can delete your data from your space and our database after cleaning, providing you maximum peace of mind. We maintain strict data isolation and confidentiality for all our clients.</p>
+                    <div class="hidden mt-2">
+                        <p>Absolutely not. You can delete your data from your space and our database after cleaning providing you maximum peace of mind.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow">
-                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
-                        <h3 class="font-semibold text-lg">What are your pricing options?</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <button class="w-full text-left font-semibold text-navy hover:text-blue-800" onclick="toggleFAQ(this)">
+                        What are your pricing options?
                     </button>
-                    <div class="p-4 border-t hidden">
-                        <p>We offer free samples for testing of up to 100 rows. Beyond this, our pricing is based on the volume of data cleaned. Each row costs between 1 cent and 0.001 cents, depending on the size of the dataset. Larger datasets benefit from lower per-row costs. We'll provide a detailed quote after assessing your specific needs.</p>
+                    <div class="hidden mt-2">
+                        <p>We offer free samples for testing of up to 100 rows. Beyond this, each row is between 1 cent and 0.001 cents depending on the size of the dataset.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <button class="w-full text-left font-semibold text-navy hover:text-blue-800" onclick="toggleFAQ(this)">
+                        Why are you better placed than our client to clean their data?
+                    </button>
+                    <div class="hidden mt-2">
+                        <p>We developed algorithms through decades of work in data quality in very demanding environments. Our team has extensive experience in data management and AI technologies, and we've worked with leading companies and organizations worldwide.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mt-12">
-            <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
-            <button id="showContactForm" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <!-- Contact Section -->
+        <section id="contact" class="mt-12">
+            <h2 class="text-3xl font-semibold mb-6 text-navy">Contact Us</h2>
+            <button id="showContactForm" class="bg-navy hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
                 Show Contact Form
             </button>
             <div id="contactFormContainer" class="hidden mt-4">
@@ -175,20 +208,15 @@
         </section>
     </main>
 
-    <footer class="bg-blue-600 text-white p-4 mt-12">
+    <footer class="bg-navy text-white p-8 mt-12">
         <div class="container mx-auto text-center">
             <p>&copy; 2023 DataClean AI. All rights reserved.</p>
-            <a href="#" class="text-white hover:text-gray-300 ml-4">Privacy Policy</a>
-            <a href="#" class="text-white hover:text-gray-300 ml-4">Terms of Service</a>
+            <div class="mt-4">
+                <a href="#" class="text-white hover:text-gray-300 mx-2">Privacy Policy</a>
+                <a href="#" class="text-white hover:text-gray-300 mx-2">Terms of Service</a>
+            </div>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('showContactForm').addEventListener('click', function() {
-            document.getElementById('contactFormContainer').classList.remove('hidden');
-            this.classList.add('hidden');
-        });
-    </script>
 
     <script>
         const useCases = {
@@ -263,21 +291,21 @@
         function showUseCase(useCase) {
             const content = useCases[useCase];
             const contentHtml = `
-                <h3 class="text-xl font-semibold mb-4">${content.title}</h3>
+                <h3 class="text-xl font-semibold mb-4 text-navy">${content.title}</h3>
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <h4 class="font-semibold mb-2">Before:</h4>
-                        <pre class="bg-gray-100 p-2 rounded mb-2 text-xs overflow-x-auto">${JSON.stringify(content.before.data, null, 2)}</pre>
-                        <div class="bg-red-100 p-4 rounded">
-                            <h4 class="font-semibold mb-2">AI Response:</h4>
+                        <h4 class="font-semibold mb-2 text-navy">Before:</h4>
+                        <pre class="bg-light-gray p-2 rounded mb-2 text-xs overflow-x-auto">${JSON.stringify(content.before.data, null, 2)}</pre>
+                        <div class="bg-red-100 p-4 rounded border border-red-200">
+                            <h4 class="font-semibold mb-2 text-navy">AI Response:</h4>
                             <p class="text-sm">${content.before.response}</p>
                         </div>
                     </div>
                     <div>
-                        <h4 class="font-semibold mb-2">After:</h4>
-                        <pre class="bg-gray-100 p-2 rounded mb-2 text-xs overflow-x-auto">${JSON.stringify(content.after.data, null, 2)}</pre>
-                        <div class="bg-green-100 p-4 rounded">
-                            <h4 class="font-semibold mb-2">AI Response:</h4>
+                        <h4 class="font-semibold mb-2 text-navy">After:</h4>
+                        <pre class="bg-light-gray p-2 rounded mb-2 text-xs overflow-x-auto">${JSON.stringify(content.after.data, null, 2)}</pre>
+                        <div class="bg-green-100 p-4 rounded border border-green-200">
+                            <h4 class="font-semibold mb-2 text-navy">AI Response:</h4>
                             <p class="text-sm">${content.after.response}</p>
                         </div>
                     </div>
@@ -288,20 +316,25 @@
             
             // Update active tab
             document.querySelectorAll('.flex.border-b button').forEach(btn => {
-                btn.classList.remove('bg-blue-500', 'text-white');
+                btn.classList.remove('bg-navy', 'text-white');
+                btn.classList.add('text-navy');
             });
-            event.target.classList.add('bg-blue-500', 'text-white');
+            event.target.classList.add('bg-navy', 'text-white');
+            event.target.classList.remove('text-navy');
         }
 
-        // Show Sales Agent use case by default
-        showUseCase('sales');
-    </script>
+        function showContactForm() {
+            document.getElementById('contactFormContainer').classList.remove('hidden');
+            document.getElementById('showContactForm').classList.add('hidden');
+        }
 
-    <script>
         function toggleFAQ(button) {
             const answer = button.nextElementSibling;
             answer.classList.toggle('hidden');
         }
+
+        // Show Sales Agent use case by default
+        showUseCase('sales');
     </script>
 </body>
 </html>
