@@ -6,6 +6,11 @@
     <title>DataClean AI - Enhancing AI Performance Through Data Cleaning</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 font-sans">
     <header class="bg-blue-600 text-white p-4">
@@ -83,7 +88,12 @@
 
         <section class="mt-12">
             <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
-            <iframe src="https://share.hsforms.com/1lpcIlmQVS1aGeZ2hRV8R8As9cec" width="100%" height="600" frameborder="0"></iframe>
+            <button id="showContactForm" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Show Contact Form
+            </button>
+            <div id="contactFormContainer" class="hidden mt-4">
+                <iframe src="https://share.hsforms.com/1lpcIlmQVS1aGeZ2hRV8R8As9cec" width="100%" height="600" frameborder="0"></iframe>
+            </div>
         </section>
     </main>
 
@@ -92,5 +102,12 @@
             <p>&copy; 2023 DataClean AI. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('showContactForm').addEventListener('click', function() {
+            document.getElementById('contactFormContainer').classList.remove('hidden');
+            this.classList.add('hidden');
+        });
+    </script>
 </body>
 </html>
