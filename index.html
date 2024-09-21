@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataClean AI - Enhancing AI Performance Through Data Cleaning</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold">DataClean AI</h1>
+            <p class="mt-2">Enhancing AI Performance Through Data Cleaning</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 p-4">
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Our Services</h2>
+            <p class="text-lg">We work with companies and AI agent providers to clean data sources, improving AI performance and output quality.</p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">See the Difference</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Before: Uncleaned Data</h3>
+                    <pre class="bg-gray-100 p-4 rounded mb-4 text-sm overflow-x-auto">
+{
+  "customer_name": "john smith",
+  "order_date": "2023-05-15",
+  "product": "lapt0p",
+  "issue": "screen flickering sometims"
+}
+                    </pre>
+                    <div class="bg-red-100 p-4 rounded">
+                        <h4 class="font-semibold mb-2">AI Response:</h4>
+                        <p class="text-sm">
+                            Dear john smith,<br><br>
+                            Thank you for contacting us about your lapt0p issue. We're sorry to hear about the screen flickering sometims. Please try updating your graphics drivers and let us know if the problem persists.<br><br>
+                            Best regards,<br>
+                            Support Team
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">After: Cleaned Data</h3>
+                    <pre class="bg-gray-100 p-4 rounded mb-4 text-sm overflow-x-auto">
+{
+  "customer_name": "John Smith",
+  "order_date": "2023-05-15",
+  "product": "Laptop",
+  "issue": "Screen flickering intermittently"
+}
+                    </pre>
+                    <div class="bg-green-100 p-4 rounded">
+                        <h4 class="font-semibold mb-2">AI Response:</h4>
+                        <p class="text-sm">
+                            Dear John Smith,<br><br>
+                            Thank you for reaching out about the intermittent screen flickering on your laptop. We understand how frustrating this can be. Here are some steps to troubleshoot:<br><br>
+                            1. Update your graphics drivers<br>
+                            2. Check for loose connections<br>
+                            3. Run a system diagnostic<br><br>
+                            If the issue persists, please don't hesitate to contact us for further assistance.<br><br>
+                            Best regards,<br>
+                            Support Team
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-4">Why Choose Us?</h2>
+            <ul class="list-disc list-inside">
+                <li>Improved AI response accuracy</li>
+                <li>Enhanced customer satisfaction</li>
+                <li>Reduced need for human intervention</li>
+                <li>Customized data cleaning solutions</li>
+            </ul>
+        </section>
+
+        <section class="mt-12">
+            <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+            <iframe src="https://share.hsforms.com/1lpcIlmQVS1aGeZ2hRV8R8As9cec" width="100%" height="600" frameborder="0"></iframe>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600 text-white p-4 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 DataClean AI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
