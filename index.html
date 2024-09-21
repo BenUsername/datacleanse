@@ -23,55 +23,19 @@
     <main class="container mx-auto mt-8 p-4">
         <section class="mb-12">
             <h2 class="text-2xl font-semibold mb-4">Our Services</h2>
-            <p class="text-lg">We work with companies and AI agent providers to clean data sources, improving AI performance and output quality.</p>
+            <p class="text-lg">We work with companies and AI agent providers to clean data sources, improving AI performance and output quality across various domains.</p>
         </section>
 
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4">See the Difference</h2>
-            <div class="flex flex-col md:flex-row gap-8">
-                <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Before: Uncleaned Data</h3>
-                    <pre class="bg-gray-100 p-4 rounded mb-4 text-sm overflow-x-auto">
-{
-  "customer_name": "john smith",
-  "order_date": "2023-05-15",
-  "product": "lapt0p",
-  "issue": "screen flickering sometims"
-}
-                    </pre>
-                    <div class="bg-red-100 p-4 rounded">
-                        <h4 class="font-semibold mb-2">AI Response:</h4>
-                        <p class="text-sm">
-                            Dear john smith,<br><br>
-                            Thank you for contacting us about your lapt0p issue. We're sorry to hear about the screen flickering sometims. Please try updating your graphics drivers and let us know if the problem persists.<br><br>
-                            Best regards,<br>
-                            Support Team
-                        </p>
-                    </div>
+            <h2 class="text-2xl font-semibold mb-4">Use Cases</h2>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="flex border-b">
+                    <button class="flex-1 py-2 px-4 text-center font-semibold bg-blue-500 text-white" onclick="showUseCase('sales')">Sales Agent</button>
+                    <button class="flex-1 py-2 px-4 text-center font-semibold" onclick="showUseCase('support')">Customer Support</button>
+                    <button class="flex-1 py-2 px-4 text-center font-semibold" onclick="showUseCase('contract')">Contract Agent</button>
                 </div>
-                <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">After: Cleaned Data</h3>
-                    <pre class="bg-gray-100 p-4 rounded mb-4 text-sm overflow-x-auto">
-{
-  "customer_name": "John Smith",
-  "order_date": "2023-05-15",
-  "product": "Laptop",
-  "issue": "Screen flickering intermittently"
-}
-                    </pre>
-                    <div class="bg-green-100 p-4 rounded">
-                        <h4 class="font-semibold mb-2">AI Response:</h4>
-                        <p class="text-sm">
-                            Dear John Smith,<br><br>
-                            Thank you for reaching out about the intermittent screen flickering on your laptop. We understand how frustrating this can be. Here are some steps to troubleshoot:<br><br>
-                            1. Update your graphics drivers<br>
-                            2. Check for loose connections<br>
-                            3. Run a system diagnostic<br><br>
-                            If the issue persists, please don't hesitate to contact us for further assistance.<br><br>
-                            Best regards,<br>
-                            Support Team
-                        </p>
-                    </div>
+                <div id="useCaseContent" class="p-6">
+                    <!-- Content will be dynamically inserted here -->
                 </div>
             </div>
         </section>
@@ -84,6 +48,85 @@
                 <li>Reduced need for human intervention</li>
                 <li>Customized data cleaning solutions</li>
             </ul>
+        </section>
+
+        <!-- New Team Section -->
+        <section class="mt-12">
+            <h2 class="text-2xl font-semibold mb-4">Our Team</h2>
+            <p class="mb-6">At DataClean AI, our team consists of industry veterans with extensive experience in data management and AI technologies. Our experts have worked with leading companies and organizations worldwide, bringing a wealth of knowledge to every project.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-lg mb-2">Sarah Johnson</h3>
+                    <p class="text-sm text-gray-600 mb-2">Chief Data Scientist</p>
+                    <p>Former lead data scientist at JP Morgan, Sarah has over 15 years of experience in financial data analysis and cleaning.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-lg mb-2">Jean-Pierre Dubois</h3>
+                    <p class="text-sm text-gray-600 mb-2">Head of AI Integration</p>
+                    <p>Previously worked with the French government on large-scale data projects, Jean-Pierre brings expertise in handling sensitive data and complex integrations.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-lg mb-2">Alex Chen</h3>
+                    <p class="text-sm text-gray-600 mb-2">Data Cleaning Specialist</p>
+                    <p>With a background in optimizing data for WeWork and other fast-growing startups, Alex specializes in scalable data cleaning solutions for dynamic environments.</p>
+                </div>
+            </div>
+            <p class="mt-6">Our team's diverse experience with companies like JP Morgan, the French government, WeWork, and many others ensures that we can handle data cleaning challenges across various industries and scales.</p>
+        </section>
+
+        <!-- New FAQ Section -->
+        <section class="mt-12">
+            <h2 class="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="bg-white rounded-lg shadow">
+                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
+                        <h3 class="font-semibold text-lg">What types of data can you clean?</h3>
+                    </button>
+                    <div class="p-4 border-t hidden">
+                        <p>We specialize in cleaning various types of data, including customer information, product details, transaction records, and more. Our solutions are adaptable to different industries and data formats.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow">
+                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
+                        <h3 class="font-semibold text-lg">How does your data cleaning process work?</h3>
+                    </button>
+                    <div class="p-4 border-t hidden">
+                        <p>Our process involves analyzing your data, identifying inconsistencies and errors, applying custom cleaning algorithms, and validating the results. We work closely with your team to ensure the cleaned data meets your specific needs.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow">
+                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
+                        <h3 class="font-semibold text-lg">Is my data secure during the cleaning process?</h3>
+                    </button>
+                    <div class="p-4 border-t hidden">
+                        <p>Absolutely. We prioritize data security and comply with industry standards for data protection. All data is encrypted during transfer and processing, and we can sign NDAs if required.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow">
+                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
+                        <h3 class="font-semibold text-lg">How long does the data cleaning process take?</h3>
+                    </button>
+                    <div class="p-4 border-t hidden">
+                        <p>The duration depends on the volume and complexity of your data. We provide estimated timelines after an initial assessment of your dataset. For ongoing services, we establish regular cleaning schedules to maintain data quality.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow">
+                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
+                        <h3 class="font-semibold text-lg">Can you integrate with our existing systems?</h3>
+                    </button>
+                    <div class="p-4 border-t hidden">
+                        <p>Yes, we design our solutions to integrate seamlessly with various data management systems and AI platforms. We'll work with your IT team to ensure smooth integration and data flow.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow">
+                    <button class="w-full text-left p-4 focus:outline-none" onclick="toggleFAQ(this)">
+                        <h3 class="font-semibold text-lg">Will my data be used to clean the data of my competitors?</h3>
+                    </button>
+                    <div class="p-4 border-t hidden">
+                        <p>Absolutely not. You can delete your data from your space and our database after cleaning, providing you maximum peace of mind. We maintain strict data isolation and confidentiality for all our clients.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="mt-12">
@@ -100,6 +143,8 @@
     <footer class="bg-blue-600 text-white p-4 mt-12">
         <div class="container mx-auto text-center">
             <p>&copy; 2023 DataClean AI. All rights reserved.</p>
+            <a href="#" class="text-white hover:text-gray-300 ml-4">Privacy Policy</a>
+            <a href="#" class="text-white hover:text-gray-300 ml-4">Terms of Service</a>
         </div>
     </footer>
 
@@ -108,6 +153,120 @@
             document.getElementById('contactFormContainer').classList.remove('hidden');
             this.classList.add('hidden');
         });
+    </script>
+
+    <script>
+        const useCases = {
+            sales: {
+                title: "Sales Agent",
+                before: {
+                    data: {
+                        customer_name: "jane doe",
+                        last_purchase: "2023-02-30",
+                        preferred_product: "smartphne",
+                        budget: "arund 1000"
+                    },
+                    response: "Hello jane, I see you're interested in a smartphne. We have options around $1000, but I'm not sure about your exact budget. Your last purchase was on an invalid date. How can I assist you today?"
+                },
+                after: {
+                    data: {
+                        customer_name: "Jane Doe",
+                        last_purchase: "2023-02-28",
+                        preferred_product: "Smartphone",
+                        budget: "1000-1200"
+                    },
+                    response: "Hello Jane, welcome back! I see you're interested in a new smartphone with a budget of $1000-$1200. Based on your last purchase on February 28th, I have some great recommendations that align with your preferences. Would you like to hear about our latest models in this price range?"
+                },
+                benefit: "Improved product recommendations and personalization."
+            },
+            support: {
+                title: "Customer Support",
+                before: {
+                    data: {
+                        customer_name: "john smith",
+                        product: "lapt0p",
+                        issue: "screen flickering sometims",
+                        purchase_date: "2023-13-45"
+                    },
+                    response: "Dear john, I'm sorry to hear about the screen flickering on your lapt0p. Can you please provide more details about when you purchased it? The date in our system seems incorrect."
+                },
+                after: {
+                    data: {
+                        customer_name: "John Smith",
+                        product: "Laptop",
+                        issue: "Screen flickering intermittently",
+                        purchase_date: "2023-03-15"
+                    },
+                    response: "Dear John, I'm sorry to hear that you're experiencing intermittent screen flickering with your laptop purchased on March 15, 2023. Since your device is under warranty, I'd like to guide you through some troubleshooting steps. If the issue persists, we'll arrange for a repair or replacement. Shall we begin?"
+                },
+                benefit: "Enhanced problem-solving and customer satisfaction."
+            },
+            contract: {
+                title: "Contract Agent",
+                before: {
+                    data: {
+                        client: "acme corp",
+                        contract_type: "servce agreement",
+                        duration: "1 yr",
+                        value: "$10,00 per mnth"
+                    },
+                    response: "Here's a draft for acme corp's servce agreement. It will last for 1 yr at a rate of $10,00 per mnth. Please review and let me know if you need any changes."
+                },
+                after: {
+                    data: {
+                        client: "Acme Corporation",
+                        contract_type: "Service Agreement",
+                        duration: "12 months",
+                        value: "$10,000 per month"
+                    },
+                    response: "I've prepared a draft Service Agreement for Acme Corporation. The contract duration is set for 12 months, with a monthly value of $10,000. This totals $120,000 for the full term. Would you like me to highlight any specific clauses or proceed with sending it for internal review?"
+                },
+                benefit: "More precise and professional contract drafting."
+            }
+        };
+
+        function showUseCase(useCase) {
+            const content = useCases[useCase];
+            const contentHtml = `
+                <h3 class="text-xl font-semibold mb-4">${content.title}</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-semibold mb-2">Before:</h4>
+                        <pre class="bg-gray-100 p-2 rounded mb-2 text-xs overflow-x-auto">${JSON.stringify(content.before.data, null, 2)}</pre>
+                        <div class="bg-red-100 p-4 rounded">
+                            <h4 class="font-semibold mb-2">AI Response:</h4>
+                            <p class="text-sm">${content.before.response}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">After:</h4>
+                        <pre class="bg-gray-100 p-2 rounded mb-2 text-xs overflow-x-auto">${JSON.stringify(content.after.data, null, 2)}</pre>
+                        <div class="bg-green-100 p-4 rounded">
+                            <h4 class="font-semibold mb-2">AI Response:</h4>
+                            <p class="text-sm">${content.after.response}</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-sm mt-4"><strong>Benefit:</strong> ${content.benefit}</p>
+            `;
+            document.getElementById('useCaseContent').innerHTML = contentHtml;
+            
+            // Update active tab
+            document.querySelectorAll('.flex.border-b button').forEach(btn => {
+                btn.classList.remove('bg-blue-500', 'text-white');
+            });
+            event.target.classList.add('bg-blue-500', 'text-white');
+        }
+
+        // Show Sales Agent use case by default
+        showUseCase('sales');
+    </script>
+
+    <script>
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            answer.classList.toggle('hidden');
+        }
     </script>
 </body>
 </html>
